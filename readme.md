@@ -8,7 +8,7 @@ This repository is dedicated to learning and mastering Go by working through "Th
 - Create tests in Go
 - Make sure to keep all projects in lowest O time complexity. 
 
-![Go Gopher](https://i.ibb.co/wW5fSmc/gogopherwizard-removebg-preview.png) 
+![Go Gopher](./gogopherwizard-removebg-preview.png) 
 
 ## Projects List 
 As projects are completed, they will be updated here with links to the project files and a brief description. 

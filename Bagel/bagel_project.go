@@ -53,14 +53,15 @@ func mapCharIndexes(secretNumber string) map[rune]int {
 func printFeedback(guess string, charIndexMap map[rune]int) {
 	feedback := make([]string, len(guess))
 	isBagel := true
-
+	oneDigitRightSpot := os.Getenv("ONE_DIGIT_CORRECT_RIGHT_SPOT")
+	oneDigitWrongSpot := os.Getenv("ONE_DIGIT_CORRECT_WRONG_SPOT")
 	for i, char := range guess {
 		if index, ok := charIndexMap[char]; ok {
 			isBagel = false
 			if index == i {
-				feedback[i] = os.Getenv("ONE_DIGIT_CORRECT_RIGHT_SPOT")
+				feedback[i] = oneDigitRightSpot
 			} else {
-				feedback[i] = os.Getenv("ONE_DIGIT_CORRECT_WRONG_SPOT")
+				feedback[i] = oneDigitWrongSpot
 			}
 		}
 	}
